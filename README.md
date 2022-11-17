@@ -12,7 +12,7 @@ Python script that reads in files to convert from the Obojobo question format to
 ### Canvas -> Obojobo:
     [mass_2] kg -> 45 \,\mathrm{kg}
 ### How to Run it:
-    1. Download Temp_Pg.py and text files in SampleRun (ensure they are in same directory)
+    1. Download Temp_Pg.py and text files in Sample_Run (ensure they are in same directory)
     2. run python3 Temp_Pg.py
     3. Follow instructions in ConversionPy_UserGuide.pdf to run sample conversion.
     
