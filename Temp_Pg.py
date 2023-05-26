@@ -22,6 +22,12 @@ def addFilesC_O():
         s = s.replace(key, rep[key])
     file2.write(s)
 
+    j = file1.read()
+    for key in j:
+        if(key.isnumeric()):
+            j = ""
+    file2.write(j)
+
 def addFilesO_C():
     try:
         file1 = open(fd.askopenfilename(), "r")
@@ -33,8 +39,9 @@ def addFilesO_C():
         return
 
     rep = {"M=": "[M]", "m=": "[m]", "v_1 =": "[v1]", "v_0 =": "[v0]", "h =": "[h]", "k = ": "[k]", "L =": "[L]",
-           "m_1 = ": "[m1]", "m_2 = ": "[m2]",
-           "\,\mathrm{m/s}": "m/s", "\,\mathrm{kg}": "kg", "\mathrm{m}": "meters", "\,\mathrm{N/m}": "N/m"}
+           "m_1 = ": "[m1]", "m_2 = ": "[m2]","F_2=":"[F2]","F_B=":"[FB]","F_A=":"[FA]","F_B =":"[FB]","\\theta =":"[theta]","\\theta=":"[theta]","\theta=":"[theta]", "\\mu_s =":"[mu]", "\\mu_s=":"[mu]","\\;\\mathrm{N}":"N",
+           "\,\mathrm{m/s}": "m/s", "\\;\\mathrm{m/s}": "m/s", "\\mathrm{m/s}": "m/s", "\,\mathrm{kg}": "kg", "\mathrm{kg}": "kg", "\,\mathrm{m}": "meters", "\,\mathrm{N/m}": "N/m",
+           "\\;\\mathrm{kg}": "kg", "\\;\\mathrm{N}": "N", "\mathrm{N}": "N", "\\degree":"°"}
     s = file1.read()
     for key in rep:
         s = s.replace(key, rep[key])
