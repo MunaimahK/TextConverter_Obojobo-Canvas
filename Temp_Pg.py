@@ -38,9 +38,9 @@ def addFilesO_C():
     except FileNotFoundError:
         return
 
-    rep = {"M=": "[M]", "m=": "[m]", "v_1 =": "[v1]", "v_0 =": "[v0]", "h =": "[h]", "k = ": "[k]", "L =": "[L]",
+    rep = {"M=": "[M]", "m=": "[m]", "v_1 =": "[v1]", "v =": "[v]", "v_0 =": "[v0]", "h =": "[h]", "k = ": "[k]", "L =": "[L]","s_0 =":"[s_0]","s =":"[s]","d =":"[d]",
            "m_1 = ": "[m1]", "m_2 = ": "[m2]","F_2=":"[F2]","F_B=":"[FB]","F_A=":"[FA]","F_B =":"[FB]","\\theta =":"[theta]","\\theta=":"[theta]","\theta=":"[theta]", "\\mu_s =":"[mu]", "\\mu_s=":"[mu]","\\;\\mathrm{N}":"N",
-           "\,\mathrm{m/s}": "m/s", "\\;\\mathrm{m/s}": "m/s", "\\mathrm{m/s}": "m/s", "\,\mathrm{kg}": "kg", "\mathrm{kg}": "kg", "\,\mathrm{m}": "meters", "\,\mathrm{N/m}": "N/m",
+           "\,\mathrm{m/s}": "m/s", "\\;\\mathrm{m/s}": "m/s", "\\mathrm{m/s}": "m/s", "\,\mathrm{kg}": "kg", "\mathrm{kg}": "kg", "\,\mathrm{m}": "meters", "\mathrm{m}":"meters", "\,\mathrm{N/m}": "N/m", "\mathrm{N/m}":"N/m",
            "\\;\\mathrm{kg}": "kg", "\\;\\mathrm{N}": "N", "\mathrm{N}": "N", "\\degree":"°"}
     s = file1.read()
     for key in rep:
